@@ -218,20 +218,22 @@ export default function CovidDashboard() {
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Estado
                 </label>
-                <select
-                  value={filters.province}
-                  onChange={(e) => handleFilterChange('province', e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                >
-                  {NORTHEAST_STATES.map((state) => (
-                    <option
-                      key={state}
-                      value={state === 'Todos os estados' ? 'All' : state}
-                    >
-                      {state}
-                    </option>
-                  ))}
-                </select>
+                <div className='flex gap-2'>
+                  <select
+                    value={filters.province}
+                    onChange={(e) => handleFilterChange('province', e.target.value)}
+                    className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  >
+                    {NORTHEAST_STATES.map((state) => (
+                      <option
+                        key={state}
+                        value={state === 'Todos os estados' ? 'All' : state}
+                      >
+                        {state}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
 
               <div className="w-full md:w-auto">
