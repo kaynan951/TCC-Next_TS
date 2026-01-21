@@ -215,7 +215,7 @@ export default function CovidDashboard() {
           <div className="flex items-center justify-between flex-wrap gap-4">
             <h2 className="text-2xl font-semibold text-gray-800">Filtros de Busca</h2>
             <div className="flex items-end gap-4 w-full md:w-auto md:flex-row flex-col">
-              <div className="w-full md:w-auto">
+              <div className="w-full">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Estado
                 </label>
@@ -237,16 +237,18 @@ export default function CovidDashboard() {
                 </div>
               </div>
 
-              <div className="w-full md:w-auto">
+              <div className="w-full">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Data específica
                 </label>
-                <input
-                  type="date"
-                  value={filters.specificDate}
-                  onChange={(e) => handleFilterChange('specificDate', e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                />
+                <div className="flex gap-2">
+                  <input
+                    type="date"
+                    value={filters.specificDate}
+                    onChange={(e) => handleFilterChange('specificDate', e.target.value)}
+                    className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  />
+                </div>
               </div>
 
               <button
