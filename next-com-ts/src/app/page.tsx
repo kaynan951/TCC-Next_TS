@@ -178,6 +178,7 @@ export default function CovidDashboard() {
     } finally {
       setLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
 
   const handleFilterChange = <K extends keyof Filters>(
@@ -213,7 +214,7 @@ export default function CovidDashboard() {
         <div className="bg-white rounded-2xl shadow-lg p-6">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <h2 className="text-2xl font-semibold text-gray-800">Filtros de Busca</h2>
-            <div className="flex items-end gap-4 w-full md:w-auto flex-col md:flex-row">
+            <div className="flex items-end gap-4 w-full md:w-auto md:flex-row flex-col">
               <div className="w-full md:w-auto">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Estado
